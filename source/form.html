@@ -3,6 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="images/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <title>Магазин «Cat Energy»</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="styles/styles.css">
@@ -13,8 +17,12 @@
   <header class="main-header">
     <div class="container">
       <a class="main-header__logo" href="#">
-        <img class="main-header__logo-image" src="images/logotype-image.svg" width="33" height="38" alt="Логотип магазина «Cat Energy».">
-        <img class="main-header__logo-text" src="images/logotype-text.svg" width="101" height="18" alt="«CatEnergy».">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="images/logo/logo-desktop.svg" width="202" height="59" type="image/svg+xml">
+          <source media="(min-width: 768px)" srcset="images/logo/logo-tablet.svg" width="174" height="50" type="image/svg+xml">
+          <img class="main-header__logo-image" src="images/logo/logo-mobile.svg" width="33" height="38" alt="Логотип магазина «Cat Energy».">
+        </picture>
+        <img class="main-header__logo-text" src="images/logo/logo-text.svg" width="101" height="18" alt="«CatEnergy».">
       </a>
       <nav class="main-nav main-nav--nojs">
         <button class="main-nav__toggle main-nav__toggle--close" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -171,7 +179,7 @@
   <footer class="page-footer">
     <div class="container">
       <a class="page-footer__logo-link logo" href="index.html" aria-label="Логотип магазина «Cat Energy»">
-        <img class="page-footer__logo-text" src="images/logotype-text-footer.svg" width="128" height="24" alt="«CatEnergy».">
+        <img class="page-footer__logo-text" src="images/logo/logo-text.svg" width="128" height="24" alt="«CatEnergy».">
       </a>
       <ul class="page-footer__social social">
         <li class="social__item">

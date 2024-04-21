@@ -3,6 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="images/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <title>Магазин «Cat Energy»</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="styles/styles.css">
@@ -13,8 +17,12 @@
   <header class="main-header">
     <div class="container">
       <a class="main-header__logo" href="#">
-        <img class="main-header__logo-image" src="images/logotype-image.svg" width="33" height="38" alt="Логотип магазина «Cat Energy».">
-        <img class="main-header__logo-text" src="images/logotype-text.svg" width="101" height="18" alt="«CatEnergy».">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="images/logo/logo-desktop.svg" width="202" height="59" type="image/svg+xml">
+          <source media="(min-width: 768px)" srcset="images/logo/logo-tablet.svg" width="174" height="50" type="image/svg+xml">
+          <img class="main-header__logo-image" src="images/logo/logo-mobile.svg" width="33" height="38" alt="Логотип магазина «Cat Energy».">
+        </picture>
+        <img class="main-header__logo-text" src="images/logo/logo-text.svg" width="101" height="18" alt="«CatEnergy».">
       </a>
       <nav class="main-nav main-nav--nojs">
         <button class="main-nav__toggle main-nav__toggle--close" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -36,13 +44,20 @@
   </header>
 
   <main class="catalog">
-    <h1 class="catalog__title">Каталог продукции</h1>
+    <h1 class="catalog__title container">Каталог продукции</h1>
     <section class="products">
       <div class="container">
         <h2 class="visually-hidden">Питание для котов</h2>
         <ul class="products__list">
           <li class="products__item card">
-            <img class="card__image" src="images/catalog/chicken-500.png" alt="Питание для кота: курица, 500 грамм" width="140" height="107">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="images/catalog/chicken-500-desktop@1x.webp 1x, images/catalog/chicken-500-desktop@2x.webp 2x" width="169" height="210" type="image/webp">
+              <source media="(min-width: 768px)" srcset="images/catalog/chicken-500-tablet@1x.webp 1x, images/catalog/chicken-500-tablet@2x.webp 2x" width="200" height="210" type="image/webp">
+              <source media="(max-width: 767px)" srcset="images/catalog/chicken-500@1x.webp 1x, images/catalog/chicken-500@2x.webp 2x" width="140" height="107" type="image/webp">
+              <source media="(min-width: 1440px)" srcset="images/catalog/chicken-500-desktop@1x.png 1x, images/catalog/chicken-500-desktop@2x.png 2x" width="169" height="210" type="image/png">
+              <source media="(min-width: 768px)" srcset="images/catalog/chicken-500-tablet@1x.png 1x, images/catalog/chicken-500-tablet@2x.png 2x" width="200" height="210" type="image/png">
+              <img class="card__image" loading="lazy" src="images/catalog/chicken-500-mobile@1x.png" srcset="images/catalog/chicken-500-mobile@2x.png 2x" width="140" height="107" alt="Питание для кота: курица, 500 г">
+            </picture>
             <a class="card__title-link" href="#">
               <h3 class="card__title">Cat Energy PRO 500 г</h3>
             </a>
@@ -57,7 +72,14 @@
           </li>
 
           <li class="products__item card">
-            <img class="card__image" src="images/catalog/chicken-1000.png" alt="Питание для кота: курица, 1000 грамм" width="140" height="107">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="images/catalog/chicken-1000-desktop@1x.webp 1x, images/catalog/chicken-1000-desktop@2x.webp 2x" width="169" height="210" type="image/webp">
+              <source media="(min-width: 768px)" srcset="images/catalog/chicken-1000-tablet@1x.webp 1x, images/catalog/chicken-1000-tablet@2x.webp 2x" width="200" height="210" type="image/webp">
+              <source media="(max-width: 767px)" srcset="images/catalog/chicken-1000@1x.webp 1x, images/catalog/chicken-1000@2x.webp 2x" width="140" height="107" type="image/webp">
+              <source media="(min-width: 1440px)" srcset="images/catalog/chicken-1000-desktop@1x.png 1x, images/catalog/chicken-1000-desktop@2x.png 2x" width="169" height="210" type="image/png">
+              <source media="(min-width: 768px)" srcset="images/catalog/chicken-1000-tablet@1x.png 1x, images/catalog/chicken-1000-tablet@2x.png 2x" width="200" height="210" type="image/png">
+              <img class="card__image" loading="lazy" src="images/catalog/chicken-1000-mobile@1x.png" srcset="images/catalog/chicken-1000-mobile@2x.png 2x" width="140" height="107" alt="Питание для кота: курица, 1000 грамм">
+            </picture>
             <a class="card__title-link" href="#">
               <h3 class="card__title">Cat Energy PRO 1000 г</h3>
             </a>
@@ -71,7 +93,14 @@
           </li>
 
           <li class="products__item card">
-            <img class="card__image" src="images/catalog/fish-500.png" alt="Питание для кота: рыба, 500 грамм" width="140" height="107">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="images/catalog/fish-500-desktop@1x.webp 1x, images/catalog/fish-500-desktop@2x.webp 2x" width="169" height="210" type="image/webp">
+              <source media="(min-width: 768px)" srcset="images/catalog/fish-500-tablet@1x.webp 1x, images/catalog/fish-500-tablet@2x.webp 2x" width="200" height="210" type="image/webp">
+              <source media="(max-width: 767px)" srcset="images/catalog/fish-500@1x.webp 1x, images/catalog/fish-500@2x.webp 2x" width="140" height="107" type="image/webp">
+              <source media="(min-width: 1440px)" srcset="images/catalog/fish-500-desktop@1x.png 1x, images/catalog/fish-500-desktop@2x.png 2x" width="169" height="210" type="image/png">
+              <source media="(min-width: 768px)" srcset="images/catalog/fish-500-tablet@1x.png 1x, images/catalog/fish-500-tablet@2x.png 2x" width="200" height="210" type="image/png">
+              <img class="card__image" loading="lazy" src="images/catalog/fish-500-mobile@1x.png" srcset="images/catalog/fish-500-mobile@2x.png 2x" width="140" height="107" alt="Питание для кота: рыба, 500 г">
+            </picture>
             <a class="card__title-link" href="#">
               <h3 class="card__title">Cat Energy PRO 500 г</h3>
             </a>
@@ -85,7 +114,14 @@
           </li>
 
           <li class="products__item card">
-            <img class="card__image" src="images/catalog/fish-1000.png" alt="Питание для кота: рыба, 1000 грамм" width="140" height="107">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="images/catalog/fish-1000-desktop@1x.webp 1x, images/catalog/fish-1000-desktop@2x.webp 2x" width="169" height="210" type="image/webp">
+              <source media="(min-width: 768px)" srcset="images/catalog/fish-1000-tablet@1x.webp 1x, images/catalog/fish-1000-tablet@2x.webp 2x" width="200" height="210" type="image/webp">
+              <source media="(max-width: 767px)" srcset="images/catalog/fish-1000@1x.webp 1x, images/catalog/fish-1000@2x.webp 2x" width="140" height="107" type="image/webp">
+              <source media="(min-width: 1440px)" srcset="images/catalog/fish-1000-desktop@1x.png 1x, images/catalog/fish-1000-desktop@2x.png 2x" width="169" height="210" type="image/png">
+              <source media="(min-width: 768px)" srcset="images/catalog/fish-1000-tablet@1x.png 1x, images/catalog/fish-1000-tablet@2x.png 2x" width="200" height="210" type="image/png">
+              <img class="card__image" loading="lazy" src="images/catalog/fish-1000-mobile@1x.png" srcset="images/catalog/fish-1000-mobile@2x.png 2x" width="140" height="107" alt="Питание для кота: рыба, 1000 грамм">
+            </picture>
             <a class="card__title-link" href="#">
               <h3 class="card__title">Cat Energy PRO 1000 г</h3>
             </a>
@@ -99,7 +135,14 @@
           </li>
 
           <li class="products__item card">
-            <img class="card__image" src="images/catalog/buckwheat-500.png" alt="Питание для кота: гречка, 500 грамм" width="140" height="107">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="images/catalog/buckwheat-500-desktop@1x.webp 1x, images/catalog/buckwheat-500-desktop@2x.webp 2x" width="169" height="210" type="image/webp">
+              <source media="(min-width: 768px)" srcset="images/catalog/buckwheat-500-tablet@1x.webp 1x, images/catalog/buckwheat-500-tablet@2x.webp 2x" width="200" height="210" type="image/webp">
+              <source media="(max-width: 767px)" srcset="images/catalog/buckwheat-500@1x.webp 1x, images/catalog/buckwheat-500@2x.webp 2x" width="140" height="107" type="image/webp">
+              <source media="(min-width: 1440px)" srcset="images/catalog/buckwheat-500-desktop@1x.png 1x, images/catalog/buckwheat-500-desktop@2x.png 2x" width="169" height="210" type="image/png">
+              <source media="(min-width: 768px)" srcset="images/catalog/buckwheat-500-tablet@1x.png 1x, images/catalog/buckwheat-500-tablet@2x.png 2x" width="200" height="210" type="image/png">
+              <img class="card__image" loading="lazy" src="images/catalog/buckwheat-500-mobile@1x.png" srcset="images/catalog/fish-500-mobile@2x.png 2x" width="140" height="107" alt="Питание для кота: гречка, 500 г">
+            </picture>
             <a class="card__title-link" href="#">
               <h3 class="card__title">Cat Energy PRO 500 г</h3>
             </a>
@@ -113,7 +156,14 @@
           </li>
 
           <li class="products__item card">
-            <img class="card__image" src="images/catalog/buckwheat-1000.png" alt="Питание для кота: гречка, 1000 грамм" width="140" height="107">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="images/catalog/buckwheat-1000-desktop@1x.webp 1x, images/catalog/buckwheat-1000-desktop@2x.webp 2x" width="169" height="210" type="image/webp">
+              <source media="(min-width: 768px)" srcset="images/catalog/buckwheat-1000-tablet@1x.webp 1x, images/catalog/buckwheat-1000-tablet@2x.webp 2x" width="200" height="210" type="image/webp">
+              <source media="(max-width: 767px)" srcset="images/catalog/buckwheat-1000@1x.webp 1x, images/catalog/buckwheat-1000@2x.webp 2x" width="140" height="107" type="image/webp">
+              <source media="(min-width: 1440px)" srcset="images/catalog/buckwheat-1000-desktop@1x.png 1x, images/catalog/buckwheat-1000-desktop@2x.png 2x" width="169" height="210" type="image/png">
+              <source media="(min-width: 768px)" srcset="images/catalog/buckwheat-1000-tablet@1x.png 1x, images/catalog/buckwheat-1000-tablet@2x.png 2x" width="200" height="210" type="image/png">
+              <img class="card__image" loading="lazy" src="images/catalog/buckwheat-1000-mobile@1x.png" srcset="images/catalog/buckwheat-1000-mobile@2x.png 2x" width="140" height="107" alt="Питание для кота: гречка, 5000 г">
+            </picture>
             <a class="card__title-link" href="#">
               <h3 class="card__title">Cat Energy PRO 1000 г</h3>
             </a>
@@ -127,7 +177,14 @@
           </li>
 
           <li class="products__item card">
-            <img class="card__image" src="images/catalog/rice-500.png" alt="Питание для кота: рис, 500 грамм" width="140" height="107">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="images/catalog/rice-500-desktop@1x.webp 1x, images/catalog/rice-500-desktop@2x.webp 2x" width="169" height="210" type="image/webp">
+              <source media="(min-width: 768px)" srcset="images/catalog/rice-500-tablet@1x.webp 1x, images/catalog/rice-500-tablet@2x.webp 2x" width="200" height="210" type="image/webp">
+              <source media="(max-width: 767px)" srcset="images/catalog/rice-500@1x.webp 1x, images/catalog/rice-500@2x.webp 2x" width="140" height="107" type="image/webp">
+              <source media="(min-width: 1440px)" srcset="images/catalog/rice-500-desktop@1x.png 1x, images/catalog/rice-500-desktop@2x.png 2x" width="169" height="210" type="image/png">
+              <source media="(min-width: 768px)" srcset="images/catalog/rice-500-tablet@1x.png 1x, images/catalog/rice-500-tablet@2x.png 2x" width="200" height="210" type="image/png">
+              <img class="card__image" loading="lazy" src="images/catalog/rice-500-mobile@1x.png" srcset="images/catalog/rice-500-mobile@2x.png 2x" width="140" height="107" alt="Питание для кота: рис, 500 г">
+            </picture>
             <a class="card__title-link" href="#">
               <h3 class="card__title">Cat Energy PRO 500 г</h3>
             </a>
@@ -221,7 +278,7 @@
   <footer class="page-footer">
     <div class="container">
       <a class="page-footer__logo-link logo" href="index.html" aria-label="Логотип магазина «Cat Energy»">
-        <img class="page-footer__logo-text" src="images/logotype-text-footer.svg" width="128" height="24" alt="«CatEnergy».">
+        <img class="page-footer__logo-text" src="images/logo/logo-text.svg" width="128" height="24" alt="«CatEnergy».">
       </a>
       <ul class="page-footer__social social">
         <li class="social__item">

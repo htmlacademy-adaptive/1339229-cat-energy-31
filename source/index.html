@@ -3,6 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="images/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <title>Магазин «Cat Energy»</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="styles/styles.css">
@@ -13,8 +17,12 @@
   <header class="main-header">
     <div class="container">
       <a class="main-header__logo" href="#">
-        <img class="main-header__logo-image" src="images/logotype-image.svg" width="33" height="38" alt="Логотип магазина «Cat Energy».">
-        <img class="main-header__logo-text" src="images/logotype-text.svg" width="101" height="18" alt="«CatEnergy».">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="images/logo/logo-desktop.svg" width="202" height="59" type="image/svg+xml">
+          <source media="(min-width: 768px)" srcset="images/logo/logo-tablet.svg" width="174" height="50" type="image/svg+xml">
+          <img class="main-header__logo-image" src="images/logo/logo-mobile.svg" width="33" height="38" alt="Логотип магазина «Cat Energy».">
+        </picture>
+        <img class="main-header__logo-text" src="images/logo/logo-text.svg" width="101" height="18" alt="«CatEnergy».">
       </a>
       <nav class="main-nav main-nav--nojs">
         <button class="main-nav__toggle main-nav__toggle--close" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -41,8 +49,15 @@
       <div class="container">
         <h2 class="main-product__title heading">Функциональное<br> питание для котов</h2>
         <p class="main-product__slogan">Занялся собой? Займись котом!</p>
-        <div class="main-product__image">
-          <img src="images/main-product-mobile.png" width="280" height="270" alt="Питание для котов">
+        <div class="main-product__wrapper">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="images/promo-product-desktop@1x.webp 1x, images/promo-product-desktop@2x.webp 2x" width="552" height="499" type="image/webp">
+            <source media="(min-width: 768px)" srcset="images/promo-product-tablet@1x.webp 1x, images/promo-product-tablet@2x.webp 2x" width="709" height="609" type="image/webp">
+            <source media="(max-width: 767px)" srcset="images/promo-product-mobile@1x.webp 1x, images/promo-producte-mobile@2x.webp 2x" width="280" height="270" type="image/webp">
+            <source media="(min-width: 1440px)" srcset="images/promo-product-desktop@1x.png 1x, images/promo-product-desktop@2x.png 2x" width="552" height="499" type="image/png">
+            <source media="(min-width: 768px)" srcset="images/promo-product-tablet@1x.jpg 1x, images/promo-product-tablet@2x.jpg 2x" width="709" height="609" type="image/jpeg">
+            <img class="main-product__image" src="images/promo-product-mobile@1x.png" srcset="images/promo-product-mobile@2x.png 2x" width="280" height="270" alt="Питание для котов">
+          </picture>
         </div>
         <a class="main-product__button button button--green" href="form.html">
           <span>Подобрать программу</span>
@@ -75,26 +90,26 @@
     </section>
 
     <section class="advantages">
-      <h2 class="advantages__title">Как это работает</h2>
       <div class="container">
+        <h2 class="advantages__title">Как это работает</h2>
         <ul class="advantages__list">
           <!-- цифры через css count -->
-          <li class="advantages__item advantages__item--helpful">
+          <li class="advantages__item advantages__item--icon-helpful">
             <p class="advantages__text">
               Функциональное питание содержит только полезные питательные вещества.
             </p>
           </li>
-          <li class="advantages__item advantages__item--easy">
+          <li class="advantages__item advantages__item--icon-boiling">
             <p class="advantages__text">
               Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
             </p>
           </li>
-          <li class="advantages__item advantages__item--econom">
+          <li class="advantages__item advantages__item--icon-cutlery">
             <p class="advantages__text">
               Замените один-два приема обычной еды на наше функциональное питание.
             </p>
           </li>
-          <li class="advantages__item advantages__item--fast">
+          <li class="advantages__item advantages__item--icon-alarm">
             <p class="advantages__text">
               Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
             </p>
@@ -127,10 +142,16 @@
         <div class="example__slider slider">
           <div class="example__slider-images slider__images">
             <div class="slider__images-wrapper slider__images-wrapper--before">
-              <img class="example__image slider__image" src="images/example-image/cat-before.png" width="280" height="256" alt="Кот Борис до похудения">
+              <picture>
+                <source media="(min-width: 768px)" srcset="images/example/slider-cat-before-tablet@1x.png 1x, images/example/slider-cat-before-tablet@2x.png 2x" width="560" height="512" type="image/png">
+                <img class="example__image slider__image" loading="lazy" src="images/example/slider-cat-before-mobile@1x.png" srcset="images/example/slider-cat-before-mobile@2x.png 2x" width="280" height="256" alt="Кот Борис до похудения">
+              </picture>
             </div>
             <div class="slider__images-wrapper slider__images-wrapper--after">
-              <img class="example__image slider__image" src="images/example-image/cat-after.png" width="280" height="256" alt="Кот Борис после похудения">
+              <picture>
+                <source media="(min-width: 768px)" srcset="images/example/slider-cat-after-tablet@1x.png 1x, images/example/slider-cat-after-tablet@2x.png 2x" width="560" height="512" type="image/png">
+                <img class="example__image slider__image" loading="lazy" src="images/example/slider-cat-after-mobile@1x.png" srcset="images/example/slider-cat-after-mobile@2x.png 2x" width="280" height="256" alt="Кот Борис после похудения">
+              </picture>
             </div>
           </div>
           <button class="slider__button" type="button" style="left: 50%;">
@@ -148,6 +169,7 @@
           <span class="contacts__address-town">Санкт-Петербург</span>
         </address>
       </div>
+
       <div class="contacts__map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.245315807511!2d30.31910522095998!3d59.93840337330262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1712991889567!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
@@ -159,7 +181,7 @@
   <footer class="page-footer">
     <div class="container">
       <a class="page-footer__logo-link logo" href="index.html" aria-label="Логотип магазина «Cat Energy»">
-        <img class="page-footer__logo-text" src="images/logotype-text-footer.svg" width="128" height="24" alt="«CatEnergy».">
+        <img class="page-footer__logo-text" src="images/logo/logo-text.svg" width="128" height="24" alt="«CatEnergy».">
       </a>
       <ul class="page-footer__social social">
         <li class="social__item">
