@@ -1,0 +1,70 @@
+.example_text {
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    font-size: inherit;
+    line-height: inherit;
+  }
+}
+
+.example__list {
+  background-color: $color-grey-dark;
+
+  @media (min-width: $tablet-width) {
+    background-color: $color-white;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $color-grey;
+  }
+}
+
+.example__value {
+  font-family: $secondery-font;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $color-black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.example__option {
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 12px;
+  color: inherit;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.example__costs,
+.example__price {
+  font-family: $secondery-font;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $color-black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.example__slider {
+  background-color: $color-grey-dark;
+
+  @media (min-width: $desktop-width) {
+    background-color: $color-grey;
+  }
+}

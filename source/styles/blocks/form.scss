@@ -1,0 +1,49 @@
+.form {
+  font-family: $secondery-font;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  color: inherit;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.form__fieldset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: none;
+}
+
+.form__title {
+  font-size: 24px;
+  line-height: 26px;
+  color: $color-black;
+  text-transform: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.form__input {
+  font-family: $secondery-font;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  color: inherit;
+
+  border: 1px solid $color-gray-3;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

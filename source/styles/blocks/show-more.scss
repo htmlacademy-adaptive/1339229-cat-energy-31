@@ -1,0 +1,28 @@
+.show-more__title {
+  font-family: $secondery-font;
+  font-size: inherit;
+  line-height: 20px;
+  color: $color-black-1;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: inherit;
+  }
+}
+
+.show-more__text {
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 16px;
+  color: inherit;
+
+  @media (min-width: $tablet-width) {
+    font-size: inherit;
+    line-height: 18px;
+  }
+}
+
+.show-more__button {
+  color: $base-color-text;
+  background-color: $color-grey;
+}

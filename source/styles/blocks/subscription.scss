@@ -1,0 +1,12 @@
+.subscription__discription {
+  font-family: $secondery-font;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: center;
+  color: $color-black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}

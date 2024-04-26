@@ -1,0 +1,34 @@
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $base-color-text;
+
+  @media (min-width: $tablet-width) {
+    gap: 23px;
+  }
+}
+
+/* .copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $base-color-text;
+
+  @media (min-width: $tablet-width) {
+    gap: 23px;
+  }
+} */
+
+.copyright__svg {
+  width: 27px;
+  height: 34px;
+}
+
+.copyright__text {
+  display: block;
+
+  font-family: $primary-font;
+  font-size: inherit;
+  line-height: 20px;
+}
