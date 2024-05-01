@@ -1,7 +1,96 @@
+.gift {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  width: 280px;
+  min-height: 290px;
+
+  background-image:
+    linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+    url("../../images/gift-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../images/gift-background-mobile@2x.jpg");
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 59px;
+    left: 37%;
+
+    width: 78px;
+    height: 80px;
+
+    background-image: url("../../icons/stack.svg#icon-gift");
+    background-size: 78px 80px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      top: 30%;
+      left: 78px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 59px;
+      left: 37%;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    align-items: center;
+
+    width: 100%;
+    min-height: 200px;
+
+    background-image:
+      linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      url("../../images/gift-background-tablet@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/gift-background-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 245px;
+    min-height: 288px;
+
+    background-image:
+      linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      url("../../images/gift-background-desktop@1x.jpg");
+    background-size: 245px 288px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/gift-background-desktop@2x.jpg");
+    }
+  }
+}
+
 .gift__description {
+  margin: 0;
+  padding: 0 61px 43px 58px;
+
   font-family: $primary-font;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
   color: $color-white;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 125px;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    padding: 0 42px 43px;
+  }
 }

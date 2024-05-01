@@ -1,0 +1,92 @@
+.data-owner {
+  grid-area: data-owner;
+
+  padding-bottom: 12px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.data-owner__title {
+  padding: 26px 0 35px;
+
+  @media (min-width: $tablet-width) {
+    padding: 65px 0 76px;
+  }
+}
+
+.data-owner__list {
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 80px;
+  }
+}
+
+.data-owner__label {
+  position: relative;
+
+  &:hover::after,
+  &:focus-visible::after {
+    background-color: $color-green;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 20px;
+    height: 20px;
+
+    z-index: 1;
+
+    mask-repeat: no-repeat;
+    mask-position: 50% 50%;
+    mask-size: 20px;
+    background-color: $color-black;
+    margin-top: 1px;
+  }
+
+  &--email::after {
+    mask-image: url("../../icons/stack.svg#input-icon-email");
+    right: 12px;
+
+    @media (min-width: $tablet-width) {
+      right: 14px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 16px;
+    }
+  }
+
+  &--tel::after {
+    mask-image: url("../../icons/stack.svg#input-icon-phone");
+    right: 13px;
+
+    @media (min-width: $tablet-width) {
+      right: 14px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 16px;
+    }
+  }
+}
+
+.data-owner__input {
+  width: 100%;
+
+  &:hover,
+  &:focus-visible {
+    outline: 2px solid $base-color-text;
+  }
+}
+
+/* .data-owner__label:focus-visible::after {
+  background-color: $color-green;
+} */

@@ -1,0 +1,12 @@
+.catalog__title {
+  margin: 0 auto;
+  padding-top: 27px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 65px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 65px;
+  }
+}

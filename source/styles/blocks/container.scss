@@ -4,12 +4,12 @@
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
-    min-width: 92.19%;
+    width: 92.19%;
     max-width: $tablet-width-max;
   }
 
   @media (min-width: $desktop-width) {
-    min-width: 84.75%;
-    max-width: 1220px;
+    width: 84.75%;
+    //max-width: 1220px;
   }
 }

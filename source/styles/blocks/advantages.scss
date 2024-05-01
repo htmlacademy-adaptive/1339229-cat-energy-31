@@ -1,5 +1,11 @@
 .advantages {
-  padding-bottom: 45px;
+  padding-bottom: 49px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 47px;
+
+    border-bottom: 1px solid $color-gray-10;
+  }
 }
 
 .advantages__title {
@@ -17,21 +23,73 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: auto auto;
-    gap: 153px;
+    gap: 37px 153px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     grid-template-columns: auto auto auto auto;
-    gap: 94px;
+    gap: 37px 94px;
   }
 }
 
+.advantages__item {
+  position: relative;
+  margin: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 1;
+
+    width: 60px;
+    height: 60px;
+    background-color: $color-green;
+    background-size: 30px 25px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      top: 40px;
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &--icon-helpful::before {
+    background-image: url("../../icons/stack.svg#icon-helpful");
+  }
+
+  &--icon-boiling::before {
+    background-image: url("../../icons/stack.svg#icon-boiling");
+  }
+
+  &--icon-cutlery::before {
+    background-image: url("../../icons/stack.svg#icon-cutlery");
+  }
+
+  &--icon-alarm::before {
+    background-image: url("../../icons/stack.svg#icon-alarm");
+  }
+
+  @media (min-width: $tablet-width) {
+    //min-height: 280px;
+    padding: 40px 0 57px;
+  }
+}
+
+
 .advantages__text {
+  margin: 0;
+  margin-left: 80px;
   font-family: inherit;
   font-size: 14px;
   line-height: 18px;
 
   @media (min-width: $tablet-width) {
+    margin: 0;
+    margin-top: 110px;
+
     font-size: inherit;
     line-height: inherit;
   }

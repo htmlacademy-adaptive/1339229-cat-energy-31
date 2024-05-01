@@ -21,4 +21,38 @@
 
   width: 28px;
   height: 22px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 22px;
+
+    background-color: $color-gray-7;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &--vkontakte::after {
+    mask-image: url("../../icons/stack.svg#social-vkontakte");
+  }
+
+  &--youtube::after {
+    mask-image: url("../../icons/stack.svg#social-youtube");
+  }
+
+  &--telegram::after {
+    mask-image: url("../../icons/stack.svg#social-telegram");
+  }
+
+  &:hover::after,
+  &:focus::after {
+    background-color: $color-green;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+    background-color: $color-green;
+  }
 }

@@ -1,0 +1,32 @@
+.comment {
+  grid-area: comment;
+}
+
+.comment__title {
+  padding: 12px 0 38px;
+
+  @media (min-width: $tablet-width) {
+    padding: 65px 0 87px;
+  }
+}
+
+.comment__textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: 14px;
+
+  font-family: $secondery-font;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: left;
+  color: $base-color-text;
+
+  @media (min-width: $tablet-width) {
+    min-height: 175px;
+    padding: 11px 20px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

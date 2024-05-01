@@ -1,0 +1,32 @@
+.form-extra {
+  grid-area: form-extra;
+
+  padding-bottom: 34px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 60px;
+  }
+}
+
+.form-extra__list {
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.form-extra__title {
+  padding: 26px 0 34px;
+
+  @media (min-width: $tablet-width) {
+    padding: 65px 0 57px;
+  }
+}

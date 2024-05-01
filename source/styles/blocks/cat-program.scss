@@ -1,0 +1,28 @@
+.cat-program {
+  grid-area: cat-program;
+
+  padding: 22px 0 19px;
+
+  border-top: 1px solid $color-gray-6;
+  border-bottom: 1px solid $color-gray-6;
+
+  @media (min-width: $tablet-width) {
+    //padding: 66px 0 72px;
+    border: 1px solid $color-gray-3;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    border: 1px solid $color-gray-3;
+  }
+}
+
+.cat-program__list {
+  @media (min-width: $tablet-width) {
+    padding: 23px 27px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 25px 28px;
+  }
+}

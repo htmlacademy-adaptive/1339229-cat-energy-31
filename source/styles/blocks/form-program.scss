@@ -1,13 +1,35 @@
+.form-program__title {
+  margin: 27px 0 37px;
+  text-align: left;
+
+  @media (min-width: $tablet-width) {
+    margin: 64px 70px 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 64px 0 54px;
+  }
+}
+
 .form-program__discription {
+  margin: 0;
+  margin-bottom: 15px;
+
   font-family: $secondery-font;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
-  text-align: center;
+  text-align: left;
   color: $color-black;
 
   @media (min-width: $tablet-width) {
+    margin: 0 70px;
+
     font-size: 20px;
     line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 55px 0 66px;
   }
 }

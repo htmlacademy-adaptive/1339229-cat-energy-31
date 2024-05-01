@@ -4,25 +4,36 @@
   align-items: center;
   color: $base-color-text;
 
+  &::after {
+    content: "";
+    display: block;
+    width: 27px;
+    height: 34px;
+
+    background-color: $color-gray-7;
+    mask-image: url("../../icons/stack.svg#logo-htmlacademy");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    background-color: $color-green;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+    background-color: $color-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: $tablet-width) {
     gap: 23px;
   }
-}
-
-/* .copyright__link {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: $base-color-text;
-
-  @media (min-width: $tablet-width) {
-    gap: 23px;
-  }
-} */
-
-.copyright__svg {
-  width: 27px;
-  height: 34px;
 }
 
 .copyright__text {

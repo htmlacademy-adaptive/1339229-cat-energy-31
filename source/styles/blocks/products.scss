@@ -1,0 +1,18 @@
+.products__list {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  padding-top: 41px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+
+    padding-top: 84px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 80px 63px;
+  }
+}
