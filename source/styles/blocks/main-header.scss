@@ -1,17 +1,15 @@
 .main-header {
   min-height: 38px;
-  padding-top: 12px;
+
 
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
     min-height: 50px;
-    padding-top: 25px;
   }
 
   @media (min-width: $desktop-width) {
     min-height: 59px;
-    padding-top: 55px;
 
     align-items: start;
 
@@ -21,72 +19,28 @@
 
 .main-header__wrapper {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr auto 1fr;
+
+  padding: 12px 0 13px;
 
   align-items: center;
 
   background-color: $color-white;
-}
-
-.main-header__toggle {
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
-}
-
-.main-header__toggle--close {
-  width: 24px;
-  height: 24px;
-
-  background-image: url("../../icons/button-menu-mobile-open.svg");
-  background-repeat: no-repeat;
-  background-color: $color-white;
-  background-position: center;
-  border: none;
-
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.6;
-  }
-
-  @media (max-width: $mobile-width-max) {
-    margin-left: auto;
-    align-self: center;
-  }
+  border-bottom: 1px solid $color-gray-10;
 
   @media (min-width: $tablet-width) {
-    display: none;
+    padding-top: 25px;
+    border-bottom: 0;
   }
-}
 
-.main-header__toggle--open {
-  display: block;
-  margin-left: auto;
-
-  width: 18px;
-  height: 18px;
-
-  background-image: url("../../icons/button-menu-mobile-close.svg");
-  background-repeat: no-repeat;
-  background-color: $color-white;
-  background-position: center;
-  border: none;
-}
-
-.main-header__toggle--nojs {
-  display: none;
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr auto;
+    padding-top: 55px;
+  }
 }
 
 .main-header__nav {
-  display: none;
-
   width: 100%;
-  margin-left: -20px;
-  margin-right: 4px;
-  padding-inline: 20px;
 
   background-color: $color-white;
 
@@ -95,19 +49,23 @@
 
     width: auto;
     margin: 0;
+    margin-right: 30px;
     padding-inline: 0;
   }
 
   @media (min-width: $desktop-width) {
+    margin-right: 110px;
     background-color: transparent;
     z-index: 2;
   }
 }
 
-.main-header__logo {
+.main-header__logo-link {
   display: flex;
   align-items: center;
   gap: 65px;
+
+  margin-left: 20px;
 
   &:hover {
     opacity: 0.8;
@@ -118,7 +76,23 @@
   }
 
   @media (min-width: $tablet-width) {
-    gap: 13px;
+    margin-right: 13px;
+    margin-left: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 110px;
+  }
+}
+
+.main-header__logo-link--text {
+  @media (min-width: $tablet-width) {
+    margin-right: 13px;
+    margin-left: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
   }
 }
 

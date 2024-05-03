@@ -11,20 +11,37 @@
 
   @media (min-width: $desktop-width) {
     padding: 0;
-    background: linear-gradient(180deg, $color-white 181px, $color-grey 181px, $color-grey 100%);
+    background: linear-gradient(180deg, $color-white 136px, $color-grey 136px, $color-grey 100%);
   }
 }
 
 .example__title {
   margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 146px;
+  }
 }
 
 .example__wrapper {
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: repeat(3, min-content);
+    grid-template-columns: auto min-content;
     column-gap: 80px;
+  }
+}
+
+.example__info {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 99px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 75px;
   }
 }
 
@@ -42,6 +59,11 @@
     font-size: inherit;
     line-height: inherit;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 436px;
+    margin-bottom: 69px;
+  }
 }
 
 .example__stats {
@@ -56,22 +78,34 @@
 
     margin-bottom: 20px;
   }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr;
+
+    width: 436px;
+
+    margin-bottom: 55px;
+  }
 }
 
 .example__list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 32px;
+  display: flex;
+  justify-content: space-between;
 
   margin-bottom: 34px;
 
   @media (min-width: $tablet-width) {
-    column-gap: 43px;
+    //column-gap: 43px;
     margin-bottom: 0;
     background-color: $color-white;
   }
 
   @media (min-width: $desktop-width) {
+    justify-content: start;
+    gap: 42px;
+
+    margin-bottom: 55px;
+
     background-color: $color-grey;
   }
 }
@@ -94,14 +128,6 @@
     width: 162px;
     min-height: 72px;
     margin: 0;
-
-    &:first-child {
-      margin-right: 43px;
-
-      @media (min-width: $desktop-width) {
-        margin-right: 42px;
-      }
-    }
   }
 }
 
@@ -164,10 +190,17 @@
 }
 
 .example__costs {
-  display: flex;
+  display: none;
 
   @media (min-width: $tablet-width) {
+    display: flex;
     flex-direction: column;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
   }
 }
 
@@ -189,13 +222,18 @@
   }
 }
 
+.example__price {
+  @media (min-width: $desktop-width) {
+    margin-left: 63px;
+  }
+}
+
 .example__slider {
   @media (min-width: $tablet-width) {
     margin-top: 99px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-column: 2/3;
-    grid-row: 1/4;
+    margin-top: 0;
   }
 }

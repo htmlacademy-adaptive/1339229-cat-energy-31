@@ -14,37 +14,37 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header container">
-
+  <header class="main-header nav-mobile nav-mobile--off nav-mobile--nojs">
     <div class="main-header__wrapper">
-      <a class="main-header__logo" href="#">
+      <a class="main-header__logo-link" href="#">
         <picture>
           <source media="(min-width: 1220px)" srcset="images/logo/logo-desktop.svg" width="70" height="59" type="image/svg+xml">
           <source media="(min-width: 768px)" srcset="images/logo/logo-tablet.svg" width="60" height="50" type="image/svg+xml">
           <img class="main-header__logo-image" src="images/logo/logo-mobile.svg" width="33" height="38" alt="Логотип магазина «Cat Energy».">
         </picture>
+      </a>
+      <a class="main-header__logo-link main-header__logo-link--text " href="#">
         <picture>
           <source media="(min-width: 1220px)" srcset="images/logo/logo-text-desktop.svg" width="118" height="21" type="image/svg+xml">
           <img class="main-header__logo-text" src="images/logo/logo-text.svg" width="101" height="18" alt="«CatEnergy».">
         </picture>
       </a>
-      <button class="main-header__toggle main-header__toggle--close toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <button class="nav-mobile__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     </div>
 
-    <nav class="main-header__nav main-nav main-nav--nojs">
-      <ul class="main-nav__list">
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="index.html">Главная</a>
+    <nav class="main-header__nav  main-nav">
+      <ul class="main-nav__list nav-mobile__list">
+        <li class="main-nav__item main-nav__item--active">
+          <a class="main-nav__link main-nav__link--index" href="index.html">Главная</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+          <a class="main-nav__link main-nav__link--index" href="catalog.html">Каталог продукции</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--current" href="#">Подобрать программу</a>
+          <a class="main-nav__link main-nav__link--index main-nav__link--current" href="#">Подобрать программу</a>
         </li>
       </ul>
     </nav>
-
   </header>
 
   <main class="form-program">
@@ -180,8 +180,8 @@
         </address>
       </div>
       <div class="contacts__map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.245315807511!2d30.31910522095998!3d59.93840337330262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1712991889567!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.245315807511!2d30.31910522095998!3d59.93840337330262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1712991889567!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe> -->
       </div>
     </section>
 
