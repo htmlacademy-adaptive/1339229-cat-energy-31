@@ -8,13 +8,13 @@
     "show-more__button";
 
   min-height: 208px;
-  padding: 20px 0 25px;
+  padding: 28px 0 23px;
 
   &::before {
     content: "";
     position: absolute;
     display: block;
-    top: 20px;
+    top: 25px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
@@ -53,8 +53,9 @@
   font-family: $secondery-font;
   font-size: inherit;
   line-height: 20px;
-  color: $color-black-1;
+  text-transform: uppercase;
   text-align: center;
+  color: $color-black-1;
 
   @media (min-width: $tablet-width) {
     margin: 22px 39px 20px;
@@ -64,7 +65,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 22px 17px 20px;
+    margin: 10px 10px 26px;
   }
 }
 
@@ -95,6 +96,11 @@
 
   color: $base-color-text;
   background-color: $color-grey;
+
+  &:hover,
+  &:focus-within {
+    background-color: $color-grey-special;
+  }
 
   @media (min-width: $tablet-width) {
     margin-top: 32px;

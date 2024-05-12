@@ -1,9 +1,10 @@
 .slider {
   position: relative;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
+  width: 280px;
 
   @media (min-width: $tablet-width) {
-    margin: 0 74px;
+    width: 560px;
   }
 
   @media (min-width: $desktop-width) {
@@ -23,21 +24,72 @@
   height: 100%;
   padding: 0;
 
-  background-color: $color-gray-7;
+  background-color: $color-grey-dark;
   border: 0;
   border-radius: 2px;
 
-  &::after {
+  &::before {
     position: absolute;
     content: "";
     display: block;
     width: 40px;
     height: 40px;
-    top: 50%;
+    top: 42%;
     left: 50%;
     transform: translateX(-50%);
+    background-color: $color-white;
+    border-radius: 50%;
+    border: 2px solid #666666;
+  }
 
-    background-image: url("../../icons/stack.svg#slider-arrow");
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 24px;
+    height: 18px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    mask-image: url("../../icons/stack.svg#slider-arrow");
+    mask-repeat: no-repeat;
+    background-color: #666666;
+
+    @media (min-width: $tablet-width) {
+      top: 46%;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 61%;
+    }
+  }
+
+  &:hover,
+  &:focus-within {
+    background-color: $color-green;
+
+    &::before {
+      border-color: $color-green;
+    }
+
+    &::after {
+      background-color: $color-green;
+    }
+  }
+
+  &:active {
+    background-color: $color-green-active;
+    opacity: 0.6;
+
+    &::before {
+      border-color: rgba(94, 170, 47, 0.6);
+    }
+
+    &::after {
+      background-color: $color-green-active;
+      opacity: 0.6;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -50,7 +102,7 @@
   height: 100%;
   width: 50%;
   overflow: hidden;
-  background-color: #eaeaea;
+  background-color: $color-grey;
 
   &--before {
     position: relative;

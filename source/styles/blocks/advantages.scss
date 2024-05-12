@@ -4,7 +4,7 @@
   @media (min-width: $tablet-width) {
     padding-bottom: 47px;
 
-    border-bottom: 1px solid $color-gray-10;
+    border-bottom: 1px solid $color-grey-special;
   }
 
   @media (min-width: $tablet-width) {
@@ -27,12 +27,14 @@
   gap: 20px;
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: auto auto;
-    gap: 37px 153px;
+    grid-template-columns: repeat(2, 247px);
+    gap: 37px 137px;
+
+    counter-reset: section;
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(4, 1fr);
     gap: 37px 94px;
   }
 }
@@ -59,7 +61,7 @@
     background-repeat: no-repeat;
 
     @media (min-width: $tablet-width) {
-      top: 40px;
+      top: 43px;
       width: 80px;
       height: 80px;
     }
@@ -82,8 +84,21 @@
   }
 
   @media (min-width: $tablet-width) {
-    //min-height: 280px;
-    padding: 40px 0 57px;
+    padding: 43px 0 55px;
+
+    &::after {
+      counter-increment: section;
+      content: counter(section); /* Отображает текущее значение счётчика */
+      position: absolute;
+      right: 0;
+      top: 2px;
+      z-index: -1;
+
+      font-family: $secondery-font;
+      font-size: 280px;
+      line-height: 280px;
+      color: $color-grey;
+    }
   }
 }
 

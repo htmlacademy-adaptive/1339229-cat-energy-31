@@ -15,12 +15,28 @@
 
 .form-subscribe__input {
   margin: 0;
-  padding: 13px;
+  padding: 11px;
 
   font-family: $secondery-font;
   font-size: 20px;
   line-height: 29.64px;
+  text-transform: uppercase;
   color: inherit;
+
+  &:hover {
+    border: 2px solid $color-grey-special-2;
+    outline: none;
+  }
+
+  &:focus-visible {
+    border: 2px solid $base-color-text;
+    outline: none;
+  }
+
+  &:invalid {
+    border: 2px solid $base-color-red;
+    outline: none;
+  }
 
   @media (min-width: $desktop-width) {
     width: 496px;

@@ -3,16 +3,13 @@
 
   background-image:
     linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-    url("../../images/index-background-mobile@1x.jpg");
+    image-set(
+      url("../../images/index-background-mobile@1x.jpg") type("image/jpg") 1x,
+      url("../../images/index-background-mobile@2x.jpg") type("image/jpg") 2x
+    );
   background-size: 100% 302px, 320px 302px;
   background-position: top center;
   background-repeat: no-repeat;
-
-  @media (min-resolution: 2dppx) {
-    background-image:
-      linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-      url("../../images/index-background-mobile@2x.jpg");
-  }
 
   @media (min-width: $tablet-width) {
     color: $color-black;
@@ -59,7 +56,7 @@
     grid-template-rows: repeat(3, min-content);
     justify-items: start;
 
-    padding-top: 65px;
+    padding-top: 53px;
 
     text-align: left;
   }
@@ -68,9 +65,9 @@
     grid-template-columns: 600px;
     grid-template-rows: min-content min-content repeat(3, min-content);
 
-    min-height: 662px;
+    min-height: 567px;
     margin-inline: auto;
-    padding-top: 110px;
+    padding-top: 95px;
     padding-left: 80px;
   }
 }
@@ -94,11 +91,13 @@
 }
 
 .main-product__slogan {
+  margin: 0;
   margin-bottom: 302px;
 
   font-family: $secondery-font;
   font-size: 14px;
   line-height: 14px;
+  text-transform: uppercase;
   color: $color-white;
 
   @media (min-width: $tablet-width) {
@@ -111,6 +110,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-bottom: 55px;
     margin-left: 0;
   }
 }
@@ -124,7 +124,7 @@
 
   @media (min-width: $tablet-width) {
     position: relative;
-    inset: -75px auto auto;
+    inset: -82px auto auto;
     z-index: -1;
     order: 1;
     translate: 0;
@@ -132,7 +132,7 @@
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    top: 29px;
+    top: 19px;
     left: 447px;
     translate: 0;
     z-index: 1;
@@ -149,6 +149,7 @@
   @media (min-width: $tablet-width) {
     min-width: 244px;
     margin-left: 90px;
+    padding: 14px 26px;
 
     font-size: 20px;
     line-height: 26px;

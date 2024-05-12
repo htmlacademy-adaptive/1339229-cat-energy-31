@@ -9,10 +9,14 @@
 }
 
 .data-owner__title {
-  padding: 26px 0 35px;
+  padding: 24px 0 35px;
 
   @media (min-width: $tablet-width) {
-    padding: 65px 0 76px;
+    padding: 68px 0 76px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 70px 0 76px;
   }
 }
 
@@ -25,11 +29,6 @@
 
 .data-owner__label {
   position: relative;
-
-  &:hover::after,
-  &:focus-visible::after {
-    background-color: $color-green;
-  }
 
   &::after {
     content: "";
@@ -76,17 +75,17 @@
       right: 16px;
     }
   }
+
+  &:hover::after,
+  &:focus-visible::after {
+    background-color: $color-green;
+  }
+
+  &:invalid::after {
+    background-color: $base-color-red;
+  }
 }
 
 .data-owner__input {
   width: 100%;
-
-  &:hover,
-  &:focus-visible {
-    outline: 2px solid $base-color-text;
-  }
 }
-
-/* .data-owner__label:focus-visible::after {
-  background-color: $color-green;
-} */

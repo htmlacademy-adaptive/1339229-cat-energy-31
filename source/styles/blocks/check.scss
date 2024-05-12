@@ -1,3 +1,11 @@
+.check__label {
+  gap: 15px;
+
+  @media (min-width: $tablet-width) {
+    gap: 20px;
+  }
+}
+
 .check__label:has(input[disabled]) {
   opacity: 0.3;
   cursor: default;
@@ -10,7 +18,7 @@
   width: 30px;
   height: 30px;
 
-  border: 1px solid $color-gray-5;
+  border: 1px solid $color-grey-special-2;
   background-color: #ffffff;
 
   @media (min-width: $tablet-width) {
@@ -63,6 +71,10 @@
   }
 }
 
+.check__input:hover + .check__span {
+  outline: 1px solid $color-grey-special-2;
+}
+
 .check__input:focus-visible + .check__span {
-  outline: 2px solid $base-color-text;
+  outline: 1px solid $base-color-text;
 }

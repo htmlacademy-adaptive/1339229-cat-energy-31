@@ -17,17 +17,19 @@
   <header class="main-header nav-mobile nav-mobile--off nav-mobile--nojs">
     <div class="main-header__wrapper">
       <a class="main-header__logo-link" href="#">
-        <picture>
-          <source media="(min-width: 1220px)" srcset="images/logo/logo-desktop.svg" width="70" height="59" type="image/svg+xml">
-          <source media="(min-width: 768px)" srcset="images/logo/logo-tablet.svg" width="60" height="50" type="image/svg+xml">
-          <img class="main-header__logo-image" src="images/logo/logo-mobile.svg" width="33" height="38" alt="Логотип магазина «Cat Energy».">
-        </picture>
-      </a>
-      <a class="main-header__logo-link main-header__logo-link--text " href="#">
-        <picture>
-          <source media="(min-width: 1220px)" srcset="images/logo/logo-text-desktop.svg" width="118" height="21" type="image/svg+xml">
-          <img class="main-header__logo-text" src="images/logo/logo-text.svg" width="101" height="18" alt="«CatEnergy».">
-        </picture>
+        <div class="main-header__logo-image">
+          <picture>
+            <source media="(min-width: 1220px)" srcset="images/logo/logo-desktop.svg" width="70" height="59" type="image/svg+xml">
+            <source media="(min-width: 768px)" srcset="images/logo/logo-tablet.svg" width="60" height="50" type="image/svg+xml">
+            <img src="images/logo/logo-mobile.svg" width="33" height="38" alt="Логотип магазина «Cat Energy».">
+          </picture>
+        </div>
+        <div class="main-header__logo-text">
+          <picture>
+            <source media="(min-width: 1220px)" srcset="images/logo/logo-text-desktop.svg" width="118" height="21" type="image/svg+xml">
+            <img src="images/logo/logo-text.svg" width="101" height="18" alt="«CatEnergy».">
+          </picture>
+        </div>
       </a>
       <button class="nav-mobile__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     </div>
@@ -35,22 +37,22 @@
     <nav class="main-header__nav  main-nav">
       <ul class="main-nav__list nav-mobile__list">
         <li class="main-nav__item main-nav__item--active">
-          <a class="main-nav__link main-nav__link--index" href="index.html">Главная</a>
+          <a class="main-nav__link" href="index.html">Главная</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--index" href="catalog.html">Каталог продукции</a>
+          <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--index main-nav__link--current" href="#">Подобрать программу</a>
+          <a class="main-nav__link main-nav__link--current" href="#">Подбор пронраммы</a>
         </li>
       </ul>
     </nav>
   </header>
 
   <main class="form-program">
-    <div class="container">
+    <div class="page__centerer">
       <h1 class="form-program__title title">Подбор программы</h1>
-      <p class="form-program__discription">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <p class="form-program__discription">Заполните анкету, и мы подберем <br> программу питания для вашего кота</p>
       <form class="form-program__data form" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="form__fieldset cat-data">
           <legend class="visually-hidden">Данные кота</legend>
@@ -125,8 +127,7 @@
 
         <fieldset class="form__fieldset comment">
           <legend class="form__title comment__title">Комментарий</legend>
-          <label class="visually-hidden" for="comment">Комментарий</label>
-          <textarea class="comment__textarea" name="your-message" id="comment" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          <textarea class="comment__textarea" name="your-message" id="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
 
         <fieldset class="form__fieldset form-extra">
@@ -164,7 +165,7 @@
         </fieldset>
 
         <div class="form__button-wrapper">
-          <button class="form__button button" type="submit">отправить заявку</button>
+          <button class="form__button form__button--request button" type="submit">отправить заявку</button>
           <span class="form__text-important" aria-hidden="true">* — Обязательные поля</span>
         </div>
 
@@ -172,12 +173,14 @@
     </div>
 
     <section class="contacts">
-      <div class="contacts__wrapper container">
-        <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
-        <address class="contacts__address">
-          <span class="contacts__address-street">ул. Большая Конюшенная, д. 19/8</span>
-          <span class="contacts__address-town">Санкт-Петербург</span>
-        </address>
+      <div class="page__centerer">
+        <div class="contacts__wrapper">
+          <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
+          <address class="contacts__address">
+            <span class="contacts__address-street">ул. Большая Конюшенная, д. 19/8</span>
+            <span class="contacts__address-town">Санкт-Петербург</span>
+          </address>
+        </div>
       </div>
       <div class="contacts__map">
         <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.245315807511!2d30.31910522095998!3d59.93840337330262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1712991889567!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
@@ -187,13 +190,13 @@
 
   </main>
 
-  <footer class="page-footer">
-    <div class="page-footer__wrapper container">
+  <footer class="main-footer">
+    <div class="main-footer__wrapper page__centerer">
 
-      <a class="page-footer__logo-link logo" href="index.html" aria-label="Логотип магазина «Cat Energy»">
-        <img class="page-footer__logo-text" src="images/logo/logo-text.svg" width="128" height="24" alt="«CatEnergy».">
+      <a class="main-footer__logo-link logo" href="index.html" aria-label="Логотип магазина «Cat Energy»">
+        <img class="main-footer__logo-text" src="images/logo/logo-text.svg" width="128" height="24" alt="«CatEnergy».">
       </a>
-      <ul class="page-footer__social social">
+      <ul class="main-footer__social social">
         <li class="social__item">
           <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="ВКонтакте">
             <span class="visually-hidden">ВКонтакте</span>
@@ -211,7 +214,7 @@
         </li>
       </ul>
 
-      <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Логотип HTMLAcademy">
+      <a class="main-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Логотип HTMLAcademy">
         <span class="copyright__text">HTML Academy</span>
       </a>
 
