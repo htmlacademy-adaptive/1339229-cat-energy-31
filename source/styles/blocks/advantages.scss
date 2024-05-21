@@ -14,7 +14,7 @@
 }
 
 .advantages__title {
-  margin-bottom: 40px;
+  margin-bottom: 42px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 32px;
@@ -27,15 +27,15 @@
   gap: 20px;
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: repeat(2, 247px);
-    gap: 37px 137px;
+    grid-template-columns: repeat(2, 324px);
+    gap: 37px 60px;
 
     counter-reset: section;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 1fr);
-    gap: 37px 94px;
+    gap: 37px 80px;
   }
 }
 
@@ -65,6 +65,10 @@
       width: 80px;
       height: 80px;
     }
+
+    @media (min-width: $desktop-width) {
+      top: 40px;
+    }
   }
 
   &--icon-helpful::before {
@@ -90,7 +94,7 @@
       counter-increment: section;
       content: counter(section); /* Отображает текущее значение счётчика */
       position: absolute;
-      right: 0;
+      left: 114px;
       top: 2px;
       z-index: -1;
 
@@ -99,6 +103,10 @@
       line-height: 280px;
       color: $color-grey;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    align-items: start;
   }
 }
 
@@ -110,11 +118,24 @@
   font-size: 14px;
   line-height: 18px;
 
+  & br {
+    display: none;
+  }
+
   @media (min-width: $tablet-width) {
     margin: 0;
     margin-top: 110px;
+    width: 245px;
 
     font-size: inherit;
     line-height: inherit;
+
+    & br {
+      display: block;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 106px;
   }
 }

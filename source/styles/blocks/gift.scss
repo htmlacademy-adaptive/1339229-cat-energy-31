@@ -4,7 +4,6 @@
   flex-direction: column;
   justify-content: flex-end;
 
-  min-height: 290px;
   background-image:
     linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
     image-set(
@@ -12,7 +11,7 @@
       url("../../images/gift-background-mobile@2x.jpg") type("image/jpg") 2x
     );
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
 
   &::before {
@@ -46,9 +45,6 @@
     flex-direction: row;
     align-items: center;
 
-    width: 100%;
-    min-height: 200px;
-
     background-image:
       linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
       image-set(
@@ -60,8 +56,6 @@
   @media (min-width: $desktop-width) {
     flex-direction: column;
     justify-content: flex-end;
-    width: 245px;
-    min-height: 288px;
 
     background-image:
       linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
@@ -69,7 +63,6 @@
         url("../../images/gift-background-desktop@1x.jpg") type("image/jpg") 1x,
         url("../../images/gift-background-desktop@2x.jpg") type("image/jpg") 2x
       );
-    background-size: 245px 288px;
   }
 }
 

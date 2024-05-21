@@ -1,14 +1,25 @@
 .card {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto min-content repeat(2, min-content);
-  padding: 22px 0 23px;
+  padding: 22px 0 24px;
 
   @media (max-width: $mobile-width-max) {
-    border-bottom: 1px solid $color-grey-special;
+    &:first-child::before,
+    &::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 100vw;
+      right: 0;
+      bottom: 0;
+      background-color: $color-grey-special;
+      box-shadow: 100vw 0 0 0 $color-grey-special;
+    }
 
-    &:first-child {
-      border-top: 1px solid $color-grey-special;
+    &:first-child::before {
+      top: 0;
     }
   }
 
@@ -94,10 +105,14 @@
     font-size: 20px;
     line-height: inherit;
     text-align: center;
+
+    & br {
+      display: none;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    margin: 14px 15px 18px;
+    margin: 13px 15px 17px;
   }
 }
 
@@ -111,6 +126,6 @@
 
   @media (min-width: $desktop-width) {
     max-width: 169px;
-    margin-top: 35px;
+    margin-top: 34px;
   }
 }

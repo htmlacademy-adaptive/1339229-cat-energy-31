@@ -76,16 +76,19 @@
     }
   }
 
-  &:hover::after,
-  &:focus-visible::after {
+  &:hover::after {
     background-color: $color-green;
-  }
-
-  &:invalid::after {
-    background-color: $base-color-red;
   }
 }
 
 .data-owner__input {
   width: 100%;
+}
+
+.data-owner__label:has(input:user-invalid)::after {
+  background-color: $base-color-red;
+}
+
+.data-owner__label:has(input:focus-visible)::after {
+  background-color: $color-green;
 }

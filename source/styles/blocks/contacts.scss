@@ -19,7 +19,7 @@
   @media (min-width: $tablet-width) {
     column-gap: 300px;
 
-    padding: 59px 40px;
+    padding: 65px 39px;
   }
 
   @media (min-width: $desktop-width) {
@@ -40,6 +40,7 @@
   font-family: $secondery-font;
   font-size: inherit;
   line-height: 20px;
+  font-weight: 400;
   text-transform: uppercase;
   color: $color-black-1;
 
@@ -104,7 +105,7 @@
     }
   }
 
-  iframe {
+  .contacts__map iframe {
     display: block;
     border: none;
     width: 100%;

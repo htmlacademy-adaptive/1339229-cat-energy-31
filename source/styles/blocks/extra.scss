@@ -6,8 +6,10 @@
 }
 
 .extra__title {
+  position: relative;
   margin-top: 25px;
   margin-bottom: 35px;
+
   font-size: 24px;
   line-height: 24px;
 
@@ -30,12 +32,17 @@
 
 .extra__gift {
   margin-top: 35px;
+  min-height: 290px;
+  width: 100%;
 
   @media (min-width: $tablet-width) {
-    margin-top: 70px;
+    margin-top: 69px;
+    min-height: 200px;
   }
 
   @media (min-width: $desktop-width) {
     margin-top: 0;
+    width: 245px;
+    min-height: 288px;
   }
 }

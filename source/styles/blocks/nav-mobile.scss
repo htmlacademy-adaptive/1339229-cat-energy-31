@@ -1,6 +1,7 @@
 .nav-mobile__toggle {
   display: block;
-  margin-right: 20px;
+  margin-top: 2px;
+  margin-right: 21px;
   margin-left: auto;
   align-self: center;
 
@@ -28,7 +29,7 @@
   width: 24px;
   height: 24px;
 
-  background-image: url("../img/../../icons/stack.svg#button-menu-mobile-open");
+  background-image: url("../../icons/stack.svg#button-menu-mobile-open");
 
   @media (min-width: $tablet-width) {
     display: none;

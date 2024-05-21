@@ -1,5 +1,5 @@
 .programs {
-  padding: 20px 0 23px;
+  padding: 18px 0 20px;
 
   @media (min-width: $tablet-width) {
     margin-top: -82px;
@@ -14,7 +14,7 @@
 
 .programs__list {
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   gap: 20px;
 
   @media (min-width: $tablet-width) {
@@ -29,7 +29,7 @@
 
 .programs__item {
   position: relative;
-  padding: 30px 20px 18px;
+  padding: 29px 20px 18px;
   background-color: $color-grey;
 
   &--slim::before,
@@ -133,7 +133,7 @@
 
 .programs__item-subtitle {
   margin: 0;
-  margin-bottom: 29px;
+  margin-bottom: 30px;
   margin-left: 70px;
 
   font-family: $secondery-font;
@@ -157,13 +157,25 @@
 }
 
 .programs__item-text {
+  position: relative;
   margin: 0;
   margin-bottom: 23px;
   font-size: 14px;
   line-height: 18px;
   color: inherit;
 
-  border-bottom: 1px solid $color-grey;
+  @media (max-width: $mobile-width-max) {
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -23px;
+      left: 0;
+      right: 0;
+      height: 1px;
+
+      background-color: $color-grey-1;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 52px;
@@ -184,17 +196,13 @@
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 17px;
+  padding-top: 19px;
 
   font-family: $secondery-font;
   font-size: inherit;
   line-height: 16px;
   text-transform: uppercase;
   color: $color-black;
-
-  &:active {
-    opacity: 0.3;
-  }
 
   &::after {
     content: "";
@@ -208,10 +216,23 @@
 
     background-image: url("../../icons/stack.svg#arrow");
     background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      width: 32px;
+      height: 13px;
+      margin-left: 25px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 25px;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   @media (min-width: $tablet-width) {
-    margin-left: 25px;
     padding-top: 0;
 
     font-size: 20px;

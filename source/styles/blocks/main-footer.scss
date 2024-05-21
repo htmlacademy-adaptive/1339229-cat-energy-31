@@ -39,9 +39,10 @@
   display: block;
   color: $color-grey-dark;
 
-  &:focus,
-  &:hover {
+  &:hover,
+  &:focus-visible {
     opacity: 0.8;
+    outline: none;
   }
 
   &:active {

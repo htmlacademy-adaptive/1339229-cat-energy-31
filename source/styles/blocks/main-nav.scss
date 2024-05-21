@@ -1,9 +1,11 @@
 .main-nav {
   @media (min-width: $tablet-width) {
+    margin-right: 6px;
     padding-top: 25px;
   }
 
   @media (min-width: $desktop-width) {
+    margin-right: 0;
     padding-top: 55px;
   }
 }
@@ -17,8 +19,9 @@
   background-color: $color-white;
 
   @media (min-width: $tablet-width) {
+    justify-content: flex-end;
     flex-flow: row wrap;
-    gap: 33px;
+    column-gap: 33px;
 
     margin: 0;
     margin-right: 4px;
@@ -68,7 +71,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 16px 0;
+    padding: 13px 0;
 
     font-size: 18px;
     line-height: inherit;
@@ -85,14 +88,13 @@
     &::after {
       position: absolute;
       content: "";
-      bottom: 7px;
+      bottom: 3px;
       left: 0;
       right: 0;
       height: 2px;
 
       background-color: $color-green;
     }
-    //border-bottom: 2px solid $color-green;
   }
 
   &--index {
@@ -113,7 +115,6 @@
 
         background-color: $color-white;
       }
-      //border-bottom: 2px solid $color-white;
     }
   }
 }

@@ -18,13 +18,17 @@
   }
 
   &:hover::after,
-  &:focus::after {
+  &:focus-visible::after {
     background-color: $color-green;
   }
 
   &:active::after {
     opacity: 0.3;
     background-color: $color-green;
+  }
+
+  &:focus-visible {
+    outline: none;
   }
 
   &:active {

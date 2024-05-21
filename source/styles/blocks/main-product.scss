@@ -2,12 +2,14 @@
   color: $color-white;
 
   background-image:
-    linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+    linear-gradient(180deg, rgba(104, 183, 56, 0.85) 302px, $color-white 302px 100%),
     image-set(
       url("../../images/index-background-mobile@1x.jpg") type("image/jpg") 1x,
       url("../../images/index-background-mobile@2x.jpg") type("image/jpg") 2x
-    );
-  background-size: 100% 302px, 320px 302px;
+    ),
+    linear-gradient(to right, $color-background-1 50%, $color-background-2 50% 100%);
+  background-color: $color-background-2;
+  background-size: 100%, 320px 302px;
   background-position: top center;
   background-repeat: no-repeat;
 
@@ -15,6 +17,7 @@
     color: $color-black;
 
     background-image: none;
+    background-color: transparent;
   }
 
   @media (min-width: $desktop-width) {
@@ -33,9 +36,9 @@
         image-set(
           url("../../images/index-background-desktop@1x.jpg") type("image/jpg") 1x,
           url("../../images/index-background-desktop@2x.jpg") type("image/jpg") 2x
-        );
+        ),
+        linear-gradient(to right, #4f4e53 50%, #2a4519 50% 100%);
       background-color: rgba(104, 183, 56, 0.85);
-      background-size: 100%;
       background-repeat: no-repeat;
       background-position: left top;
     }
@@ -47,7 +50,7 @@
   display: grid;
 
   min-height: 480px;
-  padding-top: 27px;
+  padding-top: 25px;
 
   text-align: center;
 
@@ -56,7 +59,7 @@
     grid-template-rows: repeat(3, min-content);
     justify-items: start;
 
-    padding-top: 53px;
+    padding-top: 49px;
 
     text-align: left;
   }
@@ -73,7 +76,7 @@
 }
 
 .main-product__title {
-  margin-bottom: 27px;
+  margin-bottom: 25px;
   color: $color-white;
 
   @media (min-width: $tablet-width) {
@@ -92,7 +95,7 @@
 
 .main-product__slogan {
   margin: 0;
-  margin-bottom: 302px;
+  margin-bottom: 300px;
 
   font-family: $secondery-font;
   font-size: 14px;
@@ -117,7 +120,7 @@
 
 .main-product__picture {
   position: absolute;
-  bottom: 38px;
+  bottom: 45px;
   translate: 50%;
   right: 50%;
   width: max-content;

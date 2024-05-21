@@ -47,8 +47,12 @@
     mask-image: url("../../icons/stack.svg#social-telegram");
   }
 
+  &:focus-visible {
+    outline: none;
+  }
+
   &:hover::after,
-  &:focus::after {
+  &:focus-visible::after {
     background-color: $color-green;
   }
 
