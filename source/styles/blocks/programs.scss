@@ -1,14 +1,14 @@
 .programs {
-  padding: 18px 0 20px;
+  padding: 20px 0 22px;
 
   @media (min-width: $tablet-width) {
-    margin-top: -82px;
+    // margin-top: -82px;
     padding: 0 0 45px;
   }
 
   @media (min-width: $desktop-width) {
     margin-top: 0;
-    padding: 82px 0 75px;
+    padding: 82px 0 71px;
   }
 }
 
@@ -29,7 +29,7 @@
 
 .programs__item {
   position: relative;
-  padding: 29px 20px 18px;
+  padding: 30px 20px 16px;
   background-color: $color-grey;
 
   &--slim::before,
@@ -127,7 +127,7 @@
 
   @media (min-width: $desktop-width) {
     width: 46.7%;
-    padding: 77px 61px 55px 52px;
+    padding: 77px 61px 59px 52px;
   }
 }
 

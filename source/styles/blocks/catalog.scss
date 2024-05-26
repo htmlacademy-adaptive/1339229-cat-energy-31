@@ -1,12 +1,24 @@
-.catalog__title {
-  margin: 27px 0 0;
+.catalog {
+  padding: 27px 0 25px;
 
   @media (min-width: $tablet-width) {
-    margin: 50px 0 0;
+    padding: 50px 0 71px;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 60px auto 0;
+    padding: 60px 0 71px;
+  }
+}
+
+.catalog__title {
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: auto 0;
   }
 }
 
