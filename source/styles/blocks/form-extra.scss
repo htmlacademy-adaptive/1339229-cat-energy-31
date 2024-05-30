@@ -1,7 +1,7 @@
 .form-extra {
   grid-area: form-extra;
 
-  padding-bottom: 31px;
+  padding-bottom: 32px;
 
   @media (min-width: $tablet-width) {
     padding-bottom: 50px;
@@ -25,13 +25,13 @@
 }
 
 .form-extra__title {
-  padding: 22px 0 34px;
+  padding: 20px 0 34px;
 
   @media (min-width: $tablet-width) {
     padding: 64px 0 57px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 63px 0 57px;
+    padding: 66px 0 57px;
   }
 }

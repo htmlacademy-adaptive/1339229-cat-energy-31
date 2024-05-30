@@ -30,6 +30,7 @@
 
   @media (min-width: $desktop-width) {
     justify-content: flex-end;
+    column-gap: 35px;
 
     max-width: 600px;
     margin-right: 0;

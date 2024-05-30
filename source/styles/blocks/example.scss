@@ -4,7 +4,7 @@
   background-color: $color-grey;
 
   @media (min-width: $tablet-width) {
-    padding-top: 25px;
+    padding-top: 23px;
     padding-bottom: 80px;
     background: linear-gradient(0deg, $color-grey 462px, $color-white 462px 100%);
   }
@@ -23,7 +23,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 146px;
+    margin-bottom: 145px;
   }
 }
 
@@ -39,7 +39,7 @@
 
 .example__info {
   @media (min-width: $tablet-width) {
-    margin-bottom: 105px;
+    margin-bottom: 104px;
   }
 
   @media (min-width: $desktop-width) {
@@ -97,7 +97,7 @@
   justify-content: space-between;
 
   @media (min-width: $tablet-width) {
-    column-gap: 44px;
+    column-gap: 43px;
     background-color: $color-white;
   }
 

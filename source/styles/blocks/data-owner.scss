@@ -9,14 +9,14 @@
 }
 
 .data-owner__title {
-  padding: 24px 0 35px;
+  padding: 26px 0 35px;
 
   @media (min-width: $tablet-width) {
     padding: 68px 0 76px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 70px 0 76px;
+    padding: 68px 0 76px;
   }
 }
 
@@ -36,7 +36,7 @@
     position: absolute;
     right: 0;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-57%);
 
     width: 20px;
     height: 20px;
@@ -65,7 +65,9 @@
 
   &--tel::after {
     mask-image: url("../../icons/stack.svg#input-icon-phone");
-    right: 13px;
+    right: 14px;
+    width: 15px;
+    height: 15px;
 
     @media (min-width: $tablet-width) {
       right: 14px;

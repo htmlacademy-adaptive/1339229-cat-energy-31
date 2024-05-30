@@ -19,7 +19,7 @@
   @media (min-width: $tablet-width) {
     column-gap: 300px;
 
-    padding: 65px 39px;
+    padding: 62px 39px 61px;
   }
 
   @media (min-width: $desktop-width) {
@@ -30,7 +30,7 @@
     column-gap: 95px;
 
     width: 565px;
-    padding: 60px 76px;
+    padding: 60px 76px 60px 79px;
     background-color: $color-white;
   }
 }

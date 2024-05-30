@@ -16,7 +16,7 @@
   background-repeat: no-repeat;
 
   @media (min-width: $tablet-width) {
-    padding-top: 49px;
+    padding-top: 51px;
     min-height: 860px;
 
     color: $color-black;
@@ -26,7 +26,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 95px;
+    padding-top: 96px;
     min-height: auto;
 
     &::before {
