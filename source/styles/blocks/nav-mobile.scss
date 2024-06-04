@@ -70,5 +70,6 @@
 .nav-mobile--nojs .nav-mobile__list {
   @media (max-width: $mobile-width-max) {
     display: flex;
+    position: relative;
   }
 }

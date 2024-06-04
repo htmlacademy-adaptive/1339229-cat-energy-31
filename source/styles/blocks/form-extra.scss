@@ -27,8 +27,16 @@
 .form-extra__title {
   padding: 20px 0 34px;
 
+  &::before {
+    top: 36px;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 64px 0 57px;
+
+    &::before {
+      top: 87px;
+    }
   }
 
   @media (min-width: $desktop-width) {
