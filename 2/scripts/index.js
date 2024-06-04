@@ -1,1 +1,0 @@
-var e=document.querySelector(".nav-mobile"),o=document.querySelector(".nav-mobile__toggle");e.classList.remove("nav-mobile--nojs");o.addEventListener("click",()=>{e.classList.contains("nav-mobile--off")?(e.classList.remove("nav-mobile--off"),e.classList.add("nav-mobile--on")):(e.classList.add("nav-mobile--off"),e.classList.remove("nav-mobile--on"))});
