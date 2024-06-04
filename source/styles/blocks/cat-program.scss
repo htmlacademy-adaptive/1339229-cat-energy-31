@@ -1,0 +1,25 @@
+.cat-program {
+  grid-area: cat-program;
+
+  padding: 22px 0 19px;
+
+  border-top: 1px solid $color-grey;
+  border-bottom: 1px solid $color-grey;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    border: 1px solid $color-grey;
+  }
+}
+
+.cat-program__list {
+  row-gap: 13px;
+
+  @media (min-width: $tablet-width) {
+    padding: 23px 27px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 25px 28px;
+  }
+}

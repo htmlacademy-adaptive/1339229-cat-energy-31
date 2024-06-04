@@ -1,0 +1,189 @@
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "cat-data             cat-data"
+    "cat-program          cat-program"
+    "data-owner           data-owner"
+    "comment              comment"
+    "form-extra           form-extra"
+    "form__button-wrapper form__button-wrapper";
+
+  font-family: $secondery-font;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  color: inherit;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 40px;
+    padding-right: 40px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "cat-data             cat-program"
+      "data-owner           data-owner"
+      "comment              comment"
+      "form-extra           form-extra"
+      "form__button-wrapper form__button-wrapper";
+    column-gap: 80px;
+    padding: 0;
+  }
+}
+
+.form__fieldset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: none;
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+  }
+}
+
+.form__fieldset legend {
+  margin: 0;
+}
+
+.form__title {
+  font-size: 24px;
+  line-height: 26px;
+  color: $color-black;
+  text-align: left;
+  text-transform: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.form__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: start;
+  row-gap: 13px;
+
+  @media (min-width: $tablet-width) {
+    row-gap: 18px;
+  }
+}
+
+.form__item {
+  width: 100%;
+}
+
+.form__label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 13px;
+
+  cursor: pointer;
+}
+
+.form__caption {
+  flex-shrink: 0;
+}
+
+.form__input {
+  margin: 0;
+  padding: 11px 44px 9px 15px;
+
+  font-family: $secondery-font;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: left;
+  color: inherit;
+
+  border: 1px solid $color-grey;
+  box-sizing: border-box;
+
+  appearance: textfield;
+  cursor: pointer;
+
+  &:hover {
+    outline: 2px solid $color-grey-special-2;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $base-color-text;
+  }
+
+  &:user-invalid {
+    outline: 2px solid $base-color-red;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 11px 48px 11px 20px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.form__button-wrapper {
+  grid-area: form__button-wrapper;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 21px;
+
+  margin-bottom: 32px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 60px;
+
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 80px;
+    margin-bottom: 80px;
+  }
+}
+
+.form__button {
+  @media (min-width: $tablet-width) {
+    height: 54px;
+
+    font-size: 20px;
+    line-height: 26px;
+
+    &--request {
+      width: 284px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--request {
+      width: 570px;
+    }
+  }
+}
+
+.form__text-important {
+  display: block;
+
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: none;
+
+  @media (min-width: $tablet-width) {
+    justify-self: start;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}

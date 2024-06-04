@@ -1,0 +1,32 @@
+.page {
+  width: 100%;
+}
+
+.page__body {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100%;
+}
+
+.page__centerer {
+  position: relative;
+  width: auto;
+  margin: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    max-width: $tablet-width-max;
+    margin: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+    margin: 0 auto;
+  }
+}
+
+.page picture,
+.page source {
+  display: contents;
+}

@@ -1,0 +1,96 @@
+.data-owner {
+  grid-area: data-owner;
+
+  padding-bottom: 12px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.data-owner__title {
+  padding: 26px 0 35px;
+
+  @media (min-width: $tablet-width) {
+    padding: 68px 0 76px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 68px 0 76px;
+  }
+}
+
+.data-owner__list {
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 80px;
+  }
+}
+
+.data-owner__label {
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-57%);
+
+    width: 20px;
+    height: 20px;
+
+    z-index: 1;
+
+    mask-repeat: no-repeat;
+    mask-position: 50% 50%;
+    mask-size: 20px;
+    background-color: $color-black;
+    margin-top: 1px;
+  }
+
+  &--email::after {
+    mask-image: url("../../icons/stack.svg#input-icon-email");
+    right: 12px;
+
+    @media (min-width: $tablet-width) {
+      right: 14px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 16px;
+    }
+  }
+
+  &--tel::after {
+    mask-image: url("../../icons/stack.svg#input-icon-phone");
+    right: 14px;
+    width: 15px;
+    height: 15px;
+
+    @media (min-width: $tablet-width) {
+      right: 14px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 16px;
+    }
+  }
+
+  &:hover::after {
+    background-color: $color-green;
+  }
+}
+
+.data-owner__input {
+  width: 100%;
+}
+
+.data-owner__label:has(input:user-invalid)::after {
+  background-color: $base-color-red;
+}
+
+.data-owner__label:has(input:focus-visible)::after {
+  background-color: $color-green;
+}

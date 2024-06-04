@@ -1,0 +1,80 @@
+.check__label {
+  gap: 15px;
+
+  @media (min-width: $tablet-width) {
+    gap: 20px;
+  }
+}
+
+.check__label:has(input[disabled]) {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.check__span {
+  position: relative;
+  flex-shrink: 0;
+
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid $color-grey-special-2;
+  background-color: #ffffff;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.check__span--radio {
+  border-radius: 50%;
+}
+
+.check__input[type="radio"]:checked + .check__span--radio::after,
+.check__input[type="radio"]:active + .check__span--radio::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 13px;
+  height: 13px;
+
+  border-radius: 50%;
+  background-color: $color-green;
+
+  @media (min-width: $tablet-width) {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.check__input[type="checkbox"]:checked + .check__span--checkbox::after,
+.check__input[type="checkbox"]:active + .check__span--checkbox::after {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 14px;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-image: url("../../icons/stack.svg#checkbox-check");
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.check__input:hover + .check__span {
+  outline: 1px solid $color-grey-special-2;
+}
+
+.check__input:focus-visible + .check__span {
+  outline: 1px solid $base-color-text;
+}

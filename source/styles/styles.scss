@@ -1,7 +1,47 @@
 /* GLOBAL */
-@import "./common/variables.scss";
-@import "./common/global.scss";
-@import "./common/fonts.scss";
+@import "./global/variables.scss";
+@import "./global/mixins.scss";
+@import "./global/fonts.scss";
+@import "./global/global.scss";
+@import "./global/visually-hidden.scss";
 
 /* BLOCKS */
-@import "./blocks/header.scss";
+@import "./blocks/page.scss";
+@import "./blocks/title.scss";
+@import "./blocks/button.scss";
+@import "./blocks/main-header.scss";
+@import "./blocks/nav-mobile.scss";
+@import "./blocks/main-nav.scss";
+
+/* MAIN PAGE */
+@import "./blocks/main-product.scss";
+@import "./blocks/programs.scss";
+@import "./blocks/advantages.scss";
+@import "./blocks/example.scss";
+@import "./blocks/slider.scss";
+@import "./blocks/contacts.scss";
+
+/* FOOTER */
+@import "./blocks/main-footer.scss";
+@import "./blocks/social.scss";
+@import "./blocks/copyright.scss";
+
+/* CATALOG */
+@import "./blocks/catalog.scss";
+@import "./blocks/card.scss";
+@import "./blocks/show-more.scss";
+@import "./blocks/extra.scss";
+@import "./blocks/extra-card.scss";
+@import "./blocks/gift.scss";
+@import "./blocks/subscription.scss";
+@import "./blocks/form-subscribe.scss";
+
+/* FORM */
+@import "./blocks/form-program.scss";
+@import "./blocks/form.scss";
+@import "./blocks/cat-data.scss";
+@import "./blocks/cat-program.scss";
+@import "./blocks/check.scss";
+@import "./blocks/data-owner.scss";
+@import "./blocks/comment.scss";
+@import "./blocks/form-extra.scss";

@@ -1,0 +1,46 @@
+.extra__wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    gap: 80px;
+  }
+}
+
+.extra__title {
+  position: relative;
+  margin-bottom: 35px;
+
+  font-size: 24px;
+  line-height: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 40px;
+    margin-bottom: 80px;
+
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+.extra__gift {
+  margin-top: 35px;
+  min-height: 290px;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 69px;
+    min-height: 200px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+    width: 245px;
+    min-height: 288px;
+  }
+}

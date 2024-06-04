@@ -1,0 +1,46 @@
+.form-subscribe {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: auto 256px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: min-content 256px;
+
+    padding: 0 234px;
+  }
+}
+
+.form-subscribe__input {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 12px;
+
+  font-family: $secondery-font;
+  font-size: 20px;
+  line-height: 29.64px;
+  text-transform: uppercase;
+  color: inherit;
+  border: 1px solid $color-grey-special-2;
+
+  &:hover {
+    border: 1px solid $color-grey-special-2;
+    outline: none;
+  }
+
+  &:focus-visible {
+    border: 1px solid $base-color-text;
+    outline: none;
+  }
+
+  &:user-invalid {
+    border: 2px solid $base-color-red;
+    outline: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 496px;
+  }
+}

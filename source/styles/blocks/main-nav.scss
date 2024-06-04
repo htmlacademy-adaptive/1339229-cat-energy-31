@@ -1,0 +1,121 @@
+.main-nav {
+  @media (min-width: $tablet-width) {
+    margin-right: 6px;
+    padding-top: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 0;
+    padding-top: 55px;
+  }
+}
+
+.main-nav__list {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+
+  background-color: $color-white;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+    flex-flow: row wrap;
+    column-gap: 33px;
+
+    margin: 0;
+    margin-right: 4px;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-end;
+    column-gap: 35px;
+
+    max-width: 600px;
+    margin-right: 0;
+
+    background-color: transparent;
+  }
+}
+
+.main-nav__item {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid $color-grey-special;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: 0;
+  }
+}
+
+.main-nav__link {
+  position: relative;
+  display: block;
+
+  padding: 22px 0;
+
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: left;
+  text-transform: uppercase;
+  color: $color-black;
+
+  &:hover,
+  &:focus-within {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 13px 0;
+
+    font-size: 18px;
+    line-height: inherit;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 16px 0;
+
+    font-size: 20px;
+    line-height: 29.64px;
+  }
+
+  &--current {
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 3px;
+      left: 0;
+      right: 0;
+      height: 2px;
+
+      background-color: $color-green;
+    }
+  }
+
+  &--index {
+    @media (min-width: $desktop-width) {
+      color: $color-white;
+    }
+  }
+
+  &--index-current {
+    @media (min-width: $desktop-width) {
+      &::after {
+        position: absolute;
+        content: "";
+        bottom: 8px;
+        left: 0;
+        right: 0;
+        height: 2px;
+
+        background-color: $color-white;
+      }
+    }
+  }
+}

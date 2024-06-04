@@ -1,0 +1,238 @@
+.example {
+  padding-top: 27px;
+  padding-bottom: 20px;
+  background-color: $color-grey;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 23px;
+    padding-bottom: 80px;
+    background: linear-gradient(0deg, $color-grey 462px, $color-white 462px 100%);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    background: linear-gradient(180deg, $color-white 136px, $color-grey 136px, $color-grey 100%);
+  }
+}
+
+.example__title {
+  margin-bottom: 43px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 145px;
+  }
+}
+
+.example__wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: auto min-content;
+    column-gap: 80px;
+
+    padding-bottom: 76px;
+  }
+}
+
+.example__info {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 104px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.example__text {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 55px;
+
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 433px;
+    margin-bottom: 69px;
+  }
+}
+
+.example__stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 34px;
+  align-items: center;
+
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr;
+    row-gap: 60px;
+
+    width: 436px;
+
+    margin-bottom: 0;
+  }
+}
+
+.example__list {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    column-gap: 43px;
+    background-color: $color-white;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: start;
+    gap: 42px;
+
+    background-color: $color-grey;
+  }
+}
+
+.example__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 124px;
+  min-height: 56px;
+  margin: 0;
+  padding-bottom: 3px;
+
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+
+  @media (min-width: $tablet-width) {
+    width: 162px;
+    min-height: 72px;
+    margin: 0;
+  }
+}
+
+.example__value {
+  margin: 0;
+
+  font-family: $secondery-font;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $color-black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.example__option {
+  position: absolute;
+  top: calc(100% - 9px);
+  left: 50%;
+  transform: translateX(-51%);
+  z-index: 1;
+  display: block;
+
+  width: 87px;
+  margin: 0;
+  padding: 0 13px;
+
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  color: inherit;
+
+  background-color: $color-grey;
+
+  @media (min-width: $tablet-width) {
+    left: auto;
+    transform: none;
+
+    width: auto;
+    padding: 0 8px;
+
+    font-size: 14px;
+    line-height: 14px;
+
+    background-color: $color-white;
+
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    background: $color-grey;
+  }
+}
+
+.example__costs {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 0;
+  }
+}
+
+.example__costs,
+.example__price {
+  margin: 0;
+
+  font-family: $secondery-font;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $color-black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+  }
+}
+
+.example__price {
+  @media (min-width: $desktop-width) {
+    margin-left: 63px;
+  }
+}
+
+.example__slider {
+  @media (min-width: $tablet-width) {
+    margin-top: 99px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,108 @@
+.show-more {
+  position: relative;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "."
+    "show-more__title"
+    "show-more__text"
+    "show-more__button";
+
+  min-height: 208px;
+  padding: 28px 0 23px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+
+    width: 30px;
+    height: 30px;
+
+    background-image: url("../../icons/stack.svg#plus-for-more");
+    background-size: contain;
+
+    @media (min-width: $tablet-width) {
+      top: 50px;
+
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-template-rows: 128px min-content auto min-content;
+    padding: 10px 38px 40px;
+    margin-top: 82px;
+
+    background: none;
+    border: 2px solid $color-grey;
+  }
+}
+
+.show-more__title {
+  grid-area: show-more__title;
+
+  margin: 0;
+  margin-top: 51px;
+  margin-bottom: 8px;
+
+  font-family: $secondery-font;
+  font-size: inherit;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $color-black-1;
+
+  @media (min-width: $tablet-width) {
+    margin: 20px 38px;
+
+    font-size: 20px;
+    line-height: inherit;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 10px 10px 26px;
+  }
+}
+
+.show-more__text {
+  grid-area: show-more__text;
+  margin: 0;
+
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 16px;
+  color: inherit;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 30px;
+    font-size: inherit;
+    line-height: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
+}
+
+.show-more__button {
+  grid-area: show-more__button;
+  margin-top: 21px;
+
+  color: $base-color-text;
+  background-color: $color-grey;
+
+  &:hover,
+  &:focus-within {
+    background-color: $color-grey-special;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 32px;
+  }
+}
