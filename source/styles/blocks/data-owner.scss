@@ -11,8 +11,16 @@
 .data-owner__title {
   padding: 26px 0 35px;
 
+  &::before {
+    top: 43px;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 68px 0 76px;
+
+    &::before {
+      top: 91px;
+    }
   }
 
   @media (min-width: $desktop-width) {

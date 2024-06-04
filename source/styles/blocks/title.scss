@@ -40,14 +40,14 @@
       background-color: $color-green;
     }
 
-    &::after {
+    /* &::after {
       margin-top: 24px;
-    }
+    } */
   }
 
   @media (min-width: $desktop-width) {
     &::before {
-      top: 119px;
+      top: 19px;
     }
   }
 }

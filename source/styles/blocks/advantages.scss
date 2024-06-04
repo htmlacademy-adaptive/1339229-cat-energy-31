@@ -118,10 +118,6 @@
   font-size: 14px;
   line-height: 18px;
 
-  & br {
-    display: none;
-  }
-
   @media (min-width: $tablet-width) {
     margin: 0;
     margin-top: 108px;
@@ -129,13 +125,17 @@
 
     font-size: inherit;
     line-height: inherit;
-
-    & br {
-      display: block;
-    }
   }
 
   @media (min-width: $desktop-width) {
     margin-top: 106px;
+  }
+}
+
+.advantages__text-style br {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
   }
 }
